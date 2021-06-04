@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Selamat Datang di Web PWA</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='description' content='Aplikasi PWA'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='canonical' href='https://kulonprogokab.go.id/cadas_gunung/'>
+    <link rel='manifest' href='manifest.json'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='application-name' content='Air Horner'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='apple-mobile-web-app-title' content='Air Horner'>
+    <link rel='icon' sizes='192x192' href='images/touch/android-launchericon-192-192.png'>
+    <link rel='apple-touch-icon'  href='images/touch/android-launchericon-192-192.png'>
+    <meta name='msapplication-TileImage' content='images/touch/android-launchericon-144-144.png'>
+    <meta name='msapplication-TileColor' content='#2196F3'>
+    <meta name='theme-color' content='#2196F3'>
+    <meta property='og:title' content='Aplikasi PWA'>
+    <meta property='og:type' content='website'>
+    <meta property='og:image' content='https://kulonprogokab.go.id/cadas_gunung/images/touch/android-launchericon-192-192.png'>
+    <meta property='og:url' content='https://kulonprogokab.go.id/cadas_gunung/'>
+    <meta property='og:description' content='Aplikasi PWA Tugas'>
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:url' content='https://kulonprogokab.go.id/cadas_gunung/'>
+    <meta name='twitter:title' content='Air Horn'>
+    <meta name='twitter:description' content='The best and easiest Air Horn web app there is. No install just use it right away in your browser!'>
+    <meta name='twitter:image' content='https://kulonprogokab.go.id/cadas_gunung/images/touch/android-launchericon-192-192.png'>
+    <meta name='twitter:creator' content='@paul_kinlan'>
+    <meta http-equiv='origin-trial' content='AoSmmU3xCcjOI6/9ixevLMwZJ6JQf+SEY0pIJPkw720gFR8VtDejaYmdkg9JX/sow51jBNeuoxzPlFg35jaMyQcAAABQeyJvcmlnaW4iOiJodHRwczovL2Fpcmhvcm5lci5jb206NDQzIiwiZmVhdHVyZSI6IkJhZGdpbmdWMiIsImV4cGlyeSI6MTYwMDIxNDM5OX0='>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="jumbotron.css" rel="stylesheet"> -->
+    <script src='scripts/pwacompat.min.js' async></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">webPWA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">Profil</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3 mt-5">Selamat Datang</h1>
+          <p>PWA merupakan singkatan dari Progresive Web Application</p>
+          <p>
+          	<a class="btn btn-primary btn-lg" href="profil.html" role="button">Pelajari lebih lanjut &raquo;</a>
+          	<a class="btn btn-danger btn-lg" role="button" id="installer">Install</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Ini Grid Ke 1</h2>
+            <p>Grid Kesatu merupakan kolom dengan lebar sepertiga dari lebar halaman. Dengan menggunakan sistem grid 12, dimana lebar halaman dibagi menjadi 12 kolom, grid ini memakai class col-md-4, yang artinya menggunakan lebar 4 kolom</p>
+          </div>
+          <div class="col-md-5">
+            <h2>Ini Grid Ke 2</h2>
+            <p>Grid Kedua merupakan kolom dengan lebar 5/12 dari lebar halaman. Dengan menggunakan sistem grid 12, dimana lebar halaman dibagi menjadi 12 kolom, grid ini memakai class col-md-5, yang artinya menggunakan lebar 5 kolom</p>
+          </div>
+          <div class="col-md-3">
+            <h2>Ini Grid Ke 3</h2>
+            <p>Grid Kedua merupakan kolom dengan lebar seperempat dari lebar halaman. Dengan menggunakan sistem grid 12, dimana lebar halaman dibagi menjadi 12 kolom, grid ini memakai class col-md-3, yang artinya menggunakan lebar 3 kolom</p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; STMIK Akakom 2021</p>
+    </footer>
+
+    <script src=scripts/main.min.js></script>
+
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: './' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+  </script>
+
+  </body>
+</html>
